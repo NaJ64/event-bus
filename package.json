@@ -1,0 +1,41 @@
+{
+  "name": "event-bus",
+  "version": "1.0.0",
+  "description": "Simple TypeScript messaging/event-bus implementation using an in-memory store",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "npm run compile",
+    "clean": "node ./node_modules/rimraf/bin \"lib\"",
+    "compile": "npm run clean && npm run copy && node ./node_modules/typescript/lib/tsc",
+    "copy": "npm run copy:js",
+    "copy:js": "node ./node_modules/cpx/bin \"src/**/*.{js,json}\" \"lib\"",
+    "prepare": "npm run build && npm run test",
+    "test": "node ./node_modules/jest/bin/jest"
+  },
+  "author": "Nate Judice <njudice@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^23.3.1",
+    "cpx": "^1.5.0",
+    "jest": "^23.5.0",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^23.1.4",
+    "typescript": "^3.0.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/lib/"
+    ],
+    "testRegex": "src/.*\\.test\\.(js|ts)$"
+  }
+}
