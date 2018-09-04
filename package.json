@@ -1,7 +1,7 @@
 {
   "name": "event-bus",
   "version": "1.0.0",
-  "description": "Simple TypeScript messaging/event-bus implementation using an in-memory store",
+  "description": "A simple TypeScript messaging/event-bus implementation using an in-memory store",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
