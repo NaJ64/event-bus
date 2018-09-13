@@ -11,10 +11,17 @@
       "declaration": true,                    /* Generates corresponding '.d.ts' file. */
       "outDir": "./lib",                      /* Redirect output structure to the directory. */
       "rootDir": "./src",                     /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
+      "composite": true,                      /* Enable project compilation */
       "downlevelIteration": true,             /* Provide full support for iterables in 'for-of', spread, and destructuring when targeting 'ES5' or 'ES3'. */
       "strict": true,                         /* Enable all strict type-checking options. */
       "esModuleInterop": true,                /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
       "experimentalDecorators": true,         /* Enables experimental support for ES7 decorators. */
       "emitDecoratorMetadata": true,          /* Enables experimental support for emitting type metadata for decorators. */
-    }
+    },
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "src/**/*.test.ts"
+    ]
   }
